@@ -26,11 +26,14 @@ public class MainActivity extends AppCompatActivity {
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(input.getText())) {
+                String inputString = input.getText().toString().trim();
+                input.setText(inputString);
+                
+                if (inputString.length() == 0) {
                     input.setError("Input cannot be empty");
-                } else if (input.getText().toString().length() < 5) {
+                } else if (inputString.length() < 5) {
                     input.setError("Input needs to be longer than 5 characters.");
-                }else if(Utility.isPalindrome(input.getText().toString())) {
+                } else if (Utility.isPalindrome(inputString)) {
                     resultView.setText("'" + input.getText().toString() + "' is a palindrome \uD83D\uDE0A");
                 } else {
                     resultView.setText("'" + input.getText().toString() + "' is not a palindrome \uD83D\uDE14");

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PalindromeChecker</string>
+    <string name="app_name">Palindrome Checker</string>
     <string name="palindrom_title">Palindrom?</string>
     <string name="check_string">Check String</string>
 </resources>
