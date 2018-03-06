@@ -25,9 +25,11 @@ public class MainActivity extends AppCompatActivity {
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (input.getText().toString().length() < 5) {
+                if (input.getText().toString().length() == 0) {
+                    resultView.setText("Please enter a string.");
+                } else if (input.getText().toString().length() < 5) {
                     resultView.setText("String needs to be longer than 5 characters.");
-                } else if(Utility.isPalindrome(input.getText().toString())) {
+                }else if(Utility.isPalindrome(input.getText().toString())) {
                     resultView.setText("It's a palindrome :)");
                 } else {
                     resultView.setText("Not a palindrome :(");
