@@ -11,7 +11,8 @@
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/palindrom_title" />
+        android:text="@string/palindrom_title"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/stringInput"
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:tooltipText="min 5 chars"
+        android:hint="min 5 characters"
         android:text="" />
 
     <Button
